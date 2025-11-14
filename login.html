@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login · LankaAgro.lk</title>
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+  <main class="login-container">
+    <form id="loginForm" class="login-form" novalidate>
+      <h1 class="title">Sign in</h1>
+      <p class="subtitle">Welcome back to LankaAgro.lk</p>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+      <label for="password">Password</label>
+      <div class="password-wrap">
+        <input id="password" name="password" type="password" required minlength="8" placeholder="••••••••">
+        <button type="button" id="togglePassword" class="toggle" aria-label="Show password">Show</button>
+      </div>
+
+      <div class="row options">
+        <label class="remember"><input id="remember" type="checkbox"> Remember me</label>
+        <a href="#" class="forgot">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="primary">Login</button>
+
+      <div class="divider"><span>or</span></div>
+
+      <div class="social">
+        <button type="button" class="social-btn">Continue with Google</button>
+        <button type="button" class="social-btn">Continue with Facebook</button>
+      </div>
+
+      <p class="signup">Don't have an account? <a href="#">Sign up</a></p>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="assets/js/login.js"></script>
+</body>
+</html>
