@@ -1,0 +1,41 @@
+/* Simple responsive login styles */
+:root{
+  --bg:#f4f6f8;
+  --card:#ffffff;
+  --muted:#556677;
+  --accent:#0b6b2f;
+  --danger:#c0392b;
+}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:#0b1220;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.login-container{width:100%;max-width:420px;padding:24px;box-sizing:border-box}
+.login-form{
+  background:var(--card);
+  padding:28px;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(11,18,32,0.08);
+}
+.title{margin:0;font-size:22px}
+.subtitle{margin:6px 0 18px;color:var(--muted);font-size:14px}
+label{display:block;font-size:13px;margin-top:12px;color:#334}
+input[type=email],input[type=password]{width:100%;padding:10px 12px;margin-top:6px;border:1px solid #d6dbe0;border-radius:8px;font-size:14px;box-sizing:border-box}
+.password-wrap{position:relative}
+.toggle{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;color:#0078d4;cursor:pointer;font-weight:600;padding:6px}
+.row.options{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.primary{width:100%;margin-top:16px;background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:8px;font-size:16px;cursor:pointer}
+.divider{position:relative;text-align:center;margin:18px 0;color:#8b98a5}
+.divider span{background:var(--card);padding:0 10px;position:relative;z-index:1}
+.divider:before{content:'';display:block;height:1px;background:#e3e6ea;margin-top:12px;position:relative;top:-12px}
+.social{display:flex;gap:8px;flex-direction:column}
+.social-btn{padding:10px;border-radius:8px;border:1px solid #d6dbe0;background:#fff;cursor:pointer}
+.signup{text-align:center;margin-top:14px;color:var(--muted);font-size:14px}
+.message{margin-top:12px;font-size:14px;color:var(--accent)}
+@media (max-width:420px){.login-container{padding:16px}.login-form{padding:20px}}
