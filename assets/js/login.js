@@ -35,19 +35,29 @@ document.addEventListener('DOMContentLoaded', function () {
       email.focus();
       return;
     }
-    if (pw.length < 8) {
+    if (pw.length < 5) {
       message.style.color = 'crimson';
-      message.textContent = 'Password must be at least 8 characters.';
+      message.textContent = 'Password is required.';
       password.focus();
       return;
     }
 
-    // Simulate async login (replace with real API call)
+    // Check credentials
     message.style.color = '#0b6b2f';
     message.textContent = 'Logging in...';
+    
     setTimeout(function () {
-      // For demo, always succeed
-      message.textContent = 'Logged in (simulated).';
+      // Validate credentials
+      if (em === 'admin@gmail.com' && pw === 'admin') {
+        message.textContent = 'Login successful! Redirecting...';
+        // Redirect to home page after successful login
+        setTimeout(function() {
+          window.location.href = 'home.html';
+        }, 500);
+      } else {
+        message.style.color = 'crimson';
+        message.textContent = 'Invalid email or password.';
+      }
     }, 900);
   });
 });
