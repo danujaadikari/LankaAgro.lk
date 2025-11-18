@@ -139,6 +139,42 @@
       opacity: 0.9;
       font-size: 0.95rem;
     }
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      padding: 1rem 5%;
+      background: rgba(0,0,0,0.1);
+      overflow-x: auto;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .tab-btn {
+      background: transparent;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 8px;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+      opacity: 0.7;
+    }
+    .tab-btn:hover {
+      opacity: 1;
+      background: rgba(255,255,255,0.1);
+    }
+    .tab-btn.active {
+      background: rgba(255,255,255,0.2);
+      opacity: 1;
+      font-weight: 600;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
@@ -146,6 +182,13 @@
       }
       .welcome-section h1 {
         font-size: 2rem;
+      }
+      .tabs {
+        padding: 1rem 2%;
+      }
+      .tab-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -164,6 +207,15 @@
       <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
     </div>
   </nav>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
+    <button class="tab-btn" data-tab="marketplace">Marketplace</button>
+    <button class="tab-btn" data-tab="products">My Products</button>
+    <button class="tab-btn" data-tab="orders">Orders</button>
+    <button class="tab-btn" data-tab="messages">Messages</button>
+    <button class="tab-btn" data-tab="settings">Settings</button>
+  </div>
 
   <div class="container">
     <div class="welcome-section">
