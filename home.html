@@ -218,62 +218,112 @@
   </div>
 
   <div class="container">
-    <div class="welcome-section">
-      <h1>Welcome Back! 🎉</h1>
-      <p>Here's what's happening in your agricultural platform today</p>
+    <!-- Dashboard Tab -->
+    <div class="tab-content active" id="dashboard">
+      <div class="welcome-section">
+        <h1>Welcome Back! 🎉</h1>
+        <p>Here's what's happening in your agricultural platform today</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <div class="number">1,247</div>
+          <div class="label">Active Farmers</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">856</div>
+          <div class="label">Products Listed</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">342</div>
+          <div class="label">Buyers Connected</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">Rs 2.4M</div>
+          <div class="label">Total Transactions</div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="dashboard-card" onclick="switchTab('marketplace')">
+          <span class="icon">🛒</span>
+          <h3>Marketplace</h3>
+          <p>Browse and manage agricultural products. Buy or sell crops and produce.</p>
+        </div>
+        <div class="dashboard-card" onclick="alert('Market Analytics coming soon!')">
+          <span class="icon">📊</span>
+          <h3>Market Analytics</h3>
+          <p>View real-time market trends, pricing insights, and demand forecasts.</p>
+        </div>
+        <div class="dashboard-card" onclick="switchTab('products')">
+          <span class="icon">📦</span>
+          <h3>My Products</h3>
+          <p>Manage your listed products, inventory, and sales performance.</p>
+        </div>
+        <div class="dashboard-card" onclick="switchTab('messages')">
+          <span class="icon">💬</span>
+          <h3>Messages</h3>
+          <p>Connect with buyers, sellers, and other farmers in the community.</p>
+        </div>
+        <div class="dashboard-card" onclick="switchTab('orders')">
+          <span class="icon">🚚</span>
+          <h3>Orders</h3>
+          <p>Track your orders, deliveries, and transaction history.</p>
+        </div>
+        <div class="dashboard-card" onclick="switchTab('settings')">
+          <span class="icon">⚙️</span>
+          <h3>Settings</h3>
+          <p>Manage your account, preferences, and notification settings.</p>
+        </div>
+      </div>
     </div>
 
-    <div class="stats">
-      <div class="stat-card">
-        <div class="number">1,247</div>
-        <div class="label">Active Farmers</div>
+    <!-- Marketplace Tab -->
+    <div class="tab-content" id="marketplace">
+      <div class="welcome-section">
+        <h1>🛒 Marketplace</h1>
+        <p>Browse and purchase fresh agricultural products</p>
       </div>
-      <div class="stat-card">
-        <div class="number">856</div>
-        <div class="label">Products Listed</div>
-      </div>
-      <div class="stat-card">
-        <div class="number">342</div>
-        <div class="label">Buyers Connected</div>
-      </div>
-      <div class="stat-card">
-        <div class="number">Rs 2.4M</div>
-        <div class="label">Total Transactions</div>
-      </div>
+      <div id="marketplace-content"></div>
     </div>
 
-    <div class="dashboard-grid">
-      <div class="dashboard-card">
-        <span class="icon">🛒</span>
-        <h3>Marketplace</h3>
-        <p>Browse and manage agricultural products. Buy or sell crops and produce.</p>
+    <!-- My Products Tab -->
+    <div class="tab-content" id="products">
+      <div class="welcome-section">
+        <h1>📦 My Products</h1>
+        <p>Manage your listed products and inventory</p>
       </div>
-      <div class="dashboard-card">
-        <span class="icon">📊</span>
-        <h3>Market Analytics</h3>
-        <p>View real-time market trends, pricing insights, and demand forecasts.</p>
+      <div id="products-content"></div>
+    </div>
+
+    <!-- Orders Tab -->
+    <div class="tab-content" id="orders">
+      <div class="welcome-section">
+        <h1>🚚 Orders</h1>
+        <p>Track your orders and transaction history</p>
       </div>
-      <div class="dashboard-card">
-        <span class="icon">📦</span>
-        <h3>My Products</h3>
-        <p>Manage your listed products, inventory, and sales performance.</p>
+      <div id="orders-content"></div>
+    </div>
+
+    <!-- Messages Tab -->
+    <div class="tab-content" id="messages">
+      <div class="welcome-section">
+        <h1>💬 Messages</h1>
+        <p>Connect with buyers and sellers</p>
       </div>
-      <div class="dashboard-card">
-        <span class="icon">💬</span>
-        <h3>Messages</h3>
-        <p>Connect with buyers, sellers, and other farmers in the community.</p>
+      <div id="messages-content"></div>
+    </div>
+
+    <!-- Settings Tab -->
+    <div class="tab-content" id="settings">
+      <div class="welcome-section">
+        <h1>⚙️ Settings</h1>
+        <p>Manage your account and preferences</p>
       </div>
-      <div class="dashboard-card">
-        <span class="icon">🚚</span>
-        <h3>Orders</h3>
-        <p>Track your orders, deliveries, and transaction history.</p>
-      </div>
-      <div class="dashboard-card">
-        <span class="icon">⚙️</span>
-        <h3>Settings</h3>
-        <p>Manage your account, preferences, and notification settings.</p>
-      </div>
+      <div id="settings-content"></div>
     </div>
   </div>
+
+  <script src="assets/js/home.js"></script>
 </body>
 </html>
