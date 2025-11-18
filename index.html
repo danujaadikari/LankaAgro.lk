@@ -134,6 +134,118 @@
       opacity: 0.9;
       line-height: 1.6;
     }
+    .testimonials {
+      padding: 3rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .testimonials h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 2rem;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .testimonial-card .quote {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      opacity: 0.95;
+    }
+    .testimonial-card .author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .testimonial-card .avatar {
+      width: 50px;
+      height: 50px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .testimonial-card .author-info h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .testimonial-card .author-info p {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+    .cta-banner {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      padding: 3rem 5%;
+      text-align: center;
+      margin: 3rem 0;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .cta-banner h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .cta-banner p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+    .footer {
+      background: rgba(0,0,0,0.2);
+      padding: 3rem 5%;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .footer-section h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .footer-section ul {
+      list-style: none;
+    }
+    .footer-section ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-section a {
+      color: white;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+    .footer-section a:hover {
+      opacity: 1;
+    }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      opacity: 0.8;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2.5rem;
@@ -145,6 +257,10 @@
       .nav-buttons {
         width: 100%;
         justify-content: center;
+      }
+      .testimonials h2,
+      .cta-banner h2 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -203,5 +319,88 @@
       <p>Transparent pricing system ensuring fair deals for both farmers and buyers.</p>
     </div>
   </section>
+
+  <section class="testimonials">
+    <h2>What Our Farmers Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p class="quote">"LankaAgro.lk has completely transformed how I sell my produce. I now get fair prices and connect directly with buyers across the country."</p>
+        <div class="author">
+          <div class="avatar">👨‍🌾</div>
+          <div class="author-info">
+            <h4>Sunil Perera</h4>
+            <p>Rice Farmer, Anuradhapura</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="quote">"The market insights feature helps me plan my crops better. I know what to grow and when to sell for the best returns."</p>
+        <div class="author">
+          <div class="avatar">👩‍🌾</div>
+          <div class="author-info">
+            <h4>Nimalka Silva</h4>
+            <p>Vegetable Farmer, Nuwara Eliya</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="quote">"As a buyer, I can now source fresh produce directly from farmers. The quality is excellent and the platform is so easy to use!"</p>
+        <div class="author">
+          <div class="avatar">👨‍💼</div>
+          <div class="author-info">
+            <h4>Kamal Fernando</h4>
+            <p>Restaurant Owner, Colombo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <h2>Ready to Get Started?</h2>
+    <p>Join thousands of farmers and buyers already using LankaAgro.lk</p>
+    <div class="cta-buttons">
+      <a href="signup.html" class="btn btn-primary">Create Account</a>
+      <a href="login.html" class="btn btn-outline">Login Now</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>🌾 LankaAgro.lk</h3>
+        <p>Connecting Sri Lanka's agricultural community for a sustainable future.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#help">Help Center</a></li>
+          <li><a href="#guide">User Guide</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li>📧 info@lankaagro.lk</li>
+          <li>📱 +94 11 234 5678</li>
+          <li>📍 Colombo, Sri Lanka</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LankaAgro.lk. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+    </div>
+  </footer>
 </body>
 </html>
