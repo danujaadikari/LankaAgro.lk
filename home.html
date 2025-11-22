@@ -214,7 +214,6 @@
     <button class="tab-btn" data-tab="marketplace">Marketplace</button>
     <button class="tab-btn" data-tab="products">My Products</button>
     <button class="tab-btn" data-tab="orders">Orders</button>
-    <button class="tab-btn" data-tab="messages">Messages</button>
     <button class="tab-btn" data-tab="settings">Settings</button>
   </div>
 
@@ -261,11 +260,6 @@
           <h3>My Products</h3>
           <p>Manage your listed products, inventory, and sales performance.</p>
         </div>
-        <div class="dashboard-card" onclick="switchTab('messages')">
-          <span class="icon">💬</span>
-          <h3>Messages</h3>
-          <p>Connect with buyers, sellers, and other farmers in the community.</p>
-        </div>
         <div class="dashboard-card" onclick="switchTab('orders')">
           <span class="icon">🚚</span>
           <h3>Orders</h3>
@@ -304,15 +298,6 @@
         <p>Track your orders and transaction history</p>
       </div>
       <div id="orders-content"></div>
-    </div>
-
-    <!-- Messages Tab -->
-    <div class="tab-content" id="messages">
-      <div class="welcome-section">
-        <h1>💬 Messages</h1>
-        <p>Connect with buyers and sellers</p>
-      </div>
-      <div id="messages-content"></div>
     </div>
 
     <!-- Settings Tab -->
