@@ -206,7 +206,7 @@ class Chatbot {
 
     // Contact
     if (lowerMessage.includes('contact') || lowerMessage.includes('phone') || lowerMessage.includes('email') || lowerMessage.includes('reach')) {
-      return "You can reach us at:\n📧 Email: info@lankaagro.lk\n📞 Phone: +94 11 234 5678\n🕒 Business Hours: Mon-Sat, 8:00 AM - 6:00 PM";
+      return "You can reach us at:\n📧 Email: info@lankaagro.lk\n📞 Phone: 0786621310\n🕒 Business Hours: Mon-Sat, 8:00 AM - 6:00 PM";
     }
 
     // Help
