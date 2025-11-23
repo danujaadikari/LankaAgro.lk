@@ -213,65 +213,116 @@
     }
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 3rem 5%;
-      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      padding: 5rem 5%;
+      max-width: 1280px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
     .feature-card {
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 12px;
-      padding: 2rem;
-      border: 1px solid rgba(255,255,255,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: rgba(255,255,255,0.08);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 2.5rem;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-yellow), transparent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s ease;
+    }
+    .feature-card:hover::before {
+      transform: scaleX(1);
     }
     .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      border-color: rgba(255,215,0,0.3);
+      background: rgba(255,255,255,0.12);
     }
     .feature-card .icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
       display: block;
+      filter: drop-shadow(0 4px 12px rgba(255,215,0,0.2));
     }
     .feature-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
     .feature-card p {
-      opacity: 0.9;
-      line-height: 1.6;
+      opacity: 0.88;
+      line-height: 1.7;
+      font-size: 1rem;
+      color: var(--text-light);
     }
     .testimonials {
-      padding: 3rem 5%;
-      max-width: 1200px;
+      padding: 5rem 5%;
+      max-width: 1280px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
     .testimonials h2 {
       text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
     }
     .testimonial-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
     }
     .testimonial-card {
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 12px;
-      padding: 2rem;
-      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 2.5rem;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '❝';
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      font-size: 4rem;
+      color: rgba(255,215,0,0.2);
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+      border-color: rgba(255,215,0,0.25);
     }
     .testimonial-card .quote {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-      font-style: italic;
-      opacity: 0.95;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      opacity: 0.92;
+      position: relative;
+      padding-top: 1rem;
     }
     .testimonial-card .author {
       display: flex;
@@ -279,21 +330,23 @@
       gap: 1rem;
     }
     .testimonial-card .avatar {
-      width: 50px;
-      height: 50px;
-      background: rgba(255,255,255,0.2);
+      width: 55px;
+      height: 55px;
+      background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,255,255,0.2));
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+      border: 2px solid rgba(255,215,0,0.3);
     }
     .testimonial-card .author-info h4 {
-      font-size: 1.1rem;
-      margin-bottom: 0.25rem;
+      font-size: 1.15rem;
+      margin-bottom: 0.3rem;
+      font-weight: 700;
     }
     .testimonial-card .author-info p {
-      opacity: 0.8;
+      opacity: 0.75;
       font-size: 0.9rem;
     }
     .cta-banner {
