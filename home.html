@@ -294,11 +294,80 @@
 
     <!-- Orders Tab -->
     <div class="tab-content" id="orders">
-      <div class="welcome-section">
-        <h1>🚚 Orders</h1>
-        <p>Track your orders and transaction history</p>
+      <div class="orders-container">
+        <div class="orders-header">
+          <div class="orders-title">
+            <span>📋</span>
+            Orders Management
+          </div>
+        </div>
+
+        <!-- Order Statistics -->
+        <div class="orders-stats" id="orderStats"></div>
+
+        <!-- Filters -->
+        <div class="orders-filters">
+          <div class="filter-group">
+            <label class="filter-label">Status Filter</label>
+            <select id="statusFilter" class="filter-select">
+              <option value="">All Orders</option>
+              <option value="pending">Pending</option>
+              <option value="approved">Approved</option>
+              <option value="processing">Processing</option>
+              <option value="rejected">Rejected</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label">Search Orders</label>
+            <input 
+              type="text" 
+              id="searchOrder" 
+              class="filter-input" 
+              placeholder="Search by Order ID, Customer name or email..."
+            />
+          </div>
+        </div>
+
+        <!-- Orders Table -->
+        <div class="orders-table-container">
+          <table class="orders-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Items</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="ordersTableBody">
+              <!-- Orders will be populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div id="orders-content"></div>
+    </div>
+
+    <!-- Order Details Modal -->
+    <div class="modal" id="orderModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title">
+            <span>📋</span>
+            Order Details
+          </div>
+          <button class="modal-close" onclick="orderSystem.closeModal()">×</button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Order details will be populated by JavaScript -->
+        </div>
+        <div class="modal-footer" id="modalFooter">
+          <!-- Action buttons will be populated by JavaScript -->
+        </div>
+      </div>
     </div>
 
     <!-- Settings Tab -->
